@@ -1,4 +1,4 @@
-#requires -version 2
+﻿#requires -version 2
 param
 (
     [string]$path = $null
@@ -22,7 +22,7 @@ if (!$docs)
 $pdf_path = $path + "\PDF"
 if (!(Test-Path $pdf_path))
 {
-    Write-Verbose "Создаём каталог $pdf_path`n" -Verbose
+    Write-Verbose "Создаём каталог $pdf_path `n" -Verbose
     New-Item -ItemType directory -Path $pdf_path | Out-Null
 }
 # Количество .doc файлов
